@@ -41,6 +41,14 @@ async def on_message(message):
         embed.add_field(name=d, value=" ", inline=False)
         await message.channel.send(embed=embed, reference=message)
 
+    #동전
+    if message.content.startswith(f'{PREFIX}동전'):
+        c = random.choice('앞면','뒷면')
+        embed=discord.Embed(description=":coin: 팅그르르...",
+                            color=0x61b866)
+        embed.add_field(name=c, value=" ", inline=False)
+        await message.channel.send(embed=embed, reference=message)
+
 
 try:
     client.run(TOKEN)
