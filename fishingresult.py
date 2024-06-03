@@ -1,6 +1,6 @@
 import random
 
-fishes = ['고등어?','인면어','인면어','다리 달린 물고기','폴리 1개','실패']
+fishes = ['고등어?','다리 달린 물고기','다리 달린 물고기','실패']
 
 text1 =''
 text2 =''
@@ -27,10 +27,10 @@ def fishresult():
         legs = random.randrange(2,25)
         text1 = '다리가 ' + legs +'개 달린 물고기...?'
         if legs <= 6:
-            legtext = '그것은 저벅저벅 걸어 도망쳤다.'
+            text2 = '그것은 저벅저벅 걸어 도망쳤다.'
         if legs > 6:
-            legtext = '그것은 사사사삭 기어 도망쳤다.'
-        text2 = legtext
+            text2 = '그것은 사사사삭 기어 도망쳤다.'
+        return text2
     
     elif fish_result == '폴리 1개':
         text1 = ':coin:' + fish_result+'을(를) 낚았다.'
