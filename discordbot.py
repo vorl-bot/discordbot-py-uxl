@@ -6,6 +6,7 @@ import os
 load_dotenv()
 import random
 import gacha
+import fishingresult
 
 PREFIX = os.environ['PREFIX']
 TOKEN = os.environ['TOKEN']
@@ -47,6 +48,21 @@ async def on_message(message):
         embed=discord.Embed(description=":coin:팅그르르...",
                             color=0x61b866)
         embed.add_field(name=c, value=" ", inline=False)
+        await message.channel.send(embed=embed, reference=message)
+
+    #낚시
+    if message.content.startswith(f'{PREFIX}낚시'):
+        
+        fish = fishingresult.fishresult()
+
+        text1 = fish[0]
+        text2 = fish[1]        
+
+        embed = discord.Embed(title = '즐거운 낚시 시간!',
+                              description = '낚싯대를 잡아당기면...',
+                              color = discord.Color.blue())
+        embed.add_field(name = text1, value = text2, inline=False)
+
         await message.channel.send(embed=embed, reference=message)
 
 
