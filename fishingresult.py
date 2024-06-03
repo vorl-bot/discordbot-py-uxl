@@ -25,8 +25,9 @@ def fishresult():
 
     elif fish_result == '다리 달린 물고기':
         legs = str(random.randrange(2,25))
+        legsrun = random.choice(['저벅저벅 걸어','사사사삭 기어'])
         text1 = '다리가 ' + legs +'개 달린 물고기...?'
-        text2 = '그것은 저벅저벅 걸어 도망쳤다.'
+        text2 = '그것은 ' + legsrun + ' 도망쳤다.'
     
     elif fish_result == '폴리 1개':
         text1 = ':coin:' + fish_result+'을(를) 낚았다.'
