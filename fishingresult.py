@@ -24,7 +24,7 @@ def fishresult():
         text2 = humanfish + ' ...그것은 그렇게 말하곤 더 이상 움직이지 않았다.'
 
     elif fish_result == '다리 달린 물고기':
-        legs = random.randrange(2,25)
+        legs = str(random.randrange(2,25))
         text1 = '다리가 ' + legs +'개 달린 물고기...?'
         text2 = '그것은 저벅저벅 걸어 도망쳤다.'
     
