@@ -32,18 +32,18 @@ def fishresult():
         humanfish = random.choice(humanfishes)
         fsize = fsize + 100
         text1 = '...이게 뭐지? 인면어를 낚았다.'
-        text2 = humanfish + ' ...그것은 그렇게 말하다 금이 되어 더 이상 움직이지 않았다.'
+        text2 = humanfish + ' ...그것은 그렇게 말하곤 더 이상 움직이지 않았다.'
 
     elif fish_result == '다리 달린 물고기':
         legs = str(random.randrange(2,25))
         legsrun = random.choice(['저벅저벅 걸어','사사사삭 기어'])
         text1 = '다리가 ' + legs +'개 달린 물고기...?'
-        text2 = '그것은 ' + legsrun + ' 도망치다 금이 되었다.'
+        text2 = '그것은 ' + legsrun + ' 도망쳤다.'
     
     elif fish_result == '촉수':
         fsize = fsize + 100
         text1 = '정체불명의 촉수를 낚았다...?'
-        text2 = '성과 기록: '+str(fsize)+'cm. 조금 꿈틀거리나 싶더니, 곧 금이 되었다...'
+        text2 = '성과 기록: '+str(fsize)+'cm. 조금 꿈틀거린 것 같다...'
 
     elif fish_result == '폴리 1개':
         text1 = ':coin:' + fish_result+'을(를) 낚았다.'
@@ -52,15 +52,15 @@ def fishresult():
     elif fish_result == '일각고래' or fish_result =='철갑상어' or fish_result =='실러캔스' or fish_result == '거대 조개' or fish_result =='피라루쿠' or fish_result =='청상아리' or fish_result =='청새치' or fish_result =='킹크랩' or fish_result =='거대오징어' or fish_result =='크라켄'or fish_result == '대왕참치':
         fsize = fsize + 100
         text1 = fish_result+'? 비슷한 것을 낚았다.'
-        text2 = '성과 기록: '+str(fsize)+'cm?! ...그러나 그것은 곧 금이 되어버렸다.'
+        text2 = '성과 기록: '+str(fsize)+'cm?!'
 
     elif fish_result == '갈치':
         fsize = fsize + 50
         text1 = fish_result+'? 비슷한 것을 낚았다.'
-        text2 = '성과 기록: '+str(fsize)+'cm. ...그러나 그것은 곧 금이 되어버렸다.'
+        text2 = '성과 기록: '+str(fsize)+'cm'
     
     else:
         text1 = fish_result+'? 비슷한 것을 낚았다.'
-        text2 = '성과 기록: '+str(fsize)+'cm. ...그러나 그것은 곧 금이 되어버렸다.'
+        text2 = '성과 기록: '+str(fsize)+'cm'
 
     return text1, text2
